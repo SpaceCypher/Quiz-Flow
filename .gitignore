@@ -1,0 +1,10 @@
+# Node.js backend
+server/node_modules
+server/package-lock.json
+
+# React frontend
+client/node_modules
+client/build
+client/package-lock.json
+
+.env

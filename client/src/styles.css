@@ -1,0 +1,224 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.quiz-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.question-container {
+  margin-bottom: 20px;
+}
+
+.options-list {
+  list-style: none;
+  padding: 0;
+}
+
+.option-item {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.option-item:hover {
+  background-color: #e0f7fa;
+  border-color: #42a5f5;
+}
+.option-item.disabled{
+  background-color: #eee;
+  cursor: not-allowed;
+  color: #aaa;
+}
+
+button {
+  background-color: #42a5f5;
+  color: white;
+  border: none;
+  font-size: 15px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+Input{
+  border: 10px;
+  margin-right: 2%;
+}
+button:hover {
+  background-color: #1e88e5;
+}
+
+.results-container {
+  margin-top: 20px;
+}
+.solution-container {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px dashed #ccc;
+}
+
+.correct-answer{
+  background-color: #c8e6c9;
+}
+.wrong-answer{
+  background-color: #ffcdd2;
+}
+.correct-text {
+  color: #2e7d32;
+  font-weight: bold;
+}
+.wrong-text {
+  color: #c62828;
+  font-weight: bold;
+}
+.results-solution-container {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px dashed #ccc;
+}
+.questions-list{
+  list-style: none;
+  padding: 0;
+}
+.results-item{
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.landing-container h1{
+  margin-bottom: 20px;
+}
+
+.rules-card {
+  width: 500px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rules-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.timer-container{
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: right;
+ margin-left: auto;
+display: inline-block; 
+text-align: center; 
+}
+.question-timer{
+  margin-bottom: 10px;
+  font-style: italic;
+}
+.bottom-container{
+    max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+.correct-opacity{
+  opacity: 0.6;
+}
+.wrong-opacity{
+  opacity: 0.6;
+}
+.option-item.selected.correct-opacity {
+  background-color: #c8e6c9;
+}
+.option-item.selected.wrong-opacity{
+  background-color: #ffcdd2;
+}
+.option-item.selected {
+  background-color: #e0f7fa;
+  border-color: #42a5f5;
+}
+.questions-layout {
+  display: flex;
+  justify-content: space-between;
+ margin-bottom: 20px;
+}
+.question-content{
+  flex: 1;
+  margin-right: 20px;
+}
+.question-number{
+  margin-bottom: 10px;
+}
+.question-boxes-container{
+display: flex;
+justify-content: center;
+margin-bottom: 20px;
+}
+
+.question-boxes{
+  display: grid;
+ grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  width: auto;
+
+}
+.question-box{
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+   width: 30px; /* or whatever width you want */
+ height: 30px; /* or whatever height you want */
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.question-box.completed{
+  background-color: #eee;
+  color: #aaa;
+}
+
+.correct-answer-box{
+  background-color: #c8e6c9;
+ padding: 5px;
+  border-radius: 3px;
+}
+.landing-container form input, .landing-container form button{
+  margin-bottom: 10px;
+  padding: 10px;
+   border-radius: 5px;
+   border: 1px solid #ddd;
+}
+.landing-container form button{
+  background-color: #42a5f5;
+ color: white;
+  border: none;
+  cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.landing-container form button:hover {
+  background-color: #1e88e5;
+}
