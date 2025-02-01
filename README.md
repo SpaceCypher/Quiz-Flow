@@ -46,8 +46,7 @@ This is a quiz application built with React for the frontend and Node.js with Ex
 
 
 ## Video Demonstration
-
-[Watch the video](Demonstration/demo.mp4)
+https://github.com/user-attachments/assets/0107f785-3d5e-4ce1-8014-a9ff597eef11
 
 ## Prerequisites
 
