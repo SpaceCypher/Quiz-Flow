@@ -18,6 +18,9 @@ This is a quiz application built with React for the frontend and Node.js with Ex
 -   Shuffles questions for every new quiz.
 -   Responsive Design
 
+## Video Demonstration
+https://github.com/user-attachments/assets/0107f785-3d5e-4ce1-8014-a9ff597eef11
+
 ## UI 
 
 ![Alt text](images/image1.png)
@@ -44,9 +47,14 @@ This is a quiz application built with React for the frontend and Node.js with Ex
 
 ![Alt text](images/image11.png)
 
+## Technologies Used
 
-## Video Demonstration
-https://github.com/user-attachments/assets/0107f785-3d5e-4ce1-8014-a9ff597eef11
+*   React
+*   Node.js
+*   Express
+*   Axios
+*   React Router
+*   dotenv
 
 ## Prerequisites
 
@@ -137,14 +145,7 @@ quiz-app/
 │ ├── package.json
 │
 ├── package.json (root package.json)
-## Technologies Used
 
-*   React
-*   Node.js
-*   Express
-*   Axios
-*   React Router
-*   dotenv
 
 ## Contributing
 If you would like to contribute to this project, please follow these steps:
