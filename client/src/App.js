@@ -6,6 +6,8 @@ import './styles.css';
 
 function App() {
     return (
+          // BrowserRouter enables routing capabilities
+
         <Router>
             <div className="App">
                 <Routes>

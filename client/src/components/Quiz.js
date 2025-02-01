@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 const Quiz = ({ quizFinished: quizFinishedProp }) => {
+  // State variables for managing the quiz
   const [quizData, setQuizData] = useState(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptions, setSelectedOptions] = useState({});
@@ -19,10 +20,12 @@ const Quiz = ({ quizFinished: quizFinishedProp }) => {
   const [questionTimers, setQuestionTimers] = useState({});
   const [completedQuestions, setCompletedQuestions] = useState({});
   
-    const timerRef = useRef(null);
-    const navigate = useNavigate();
-    const location = useLocation();
+  const timerRef = useRef(null); // useRef hook for the timers
+  const navigate = useNavigate(); // useNavigate hook for navigation
+  const location = useLocation(); // useLocation hook for location
+
     useEffect(() => {
+       // useEffect to check if username is in the location.state, this allows the application to persist this value
       if(userName === undefined){
         navigate('/');
        }
@@ -35,6 +38,7 @@ const Quiz = ({ quizFinished: quizFinishedProp }) => {
           }
       },[location.state])
 
+      // useEffect hook to fetch quiz data from API
     useEffect(() => {
         const fetchQuizData = async () => {
             try {
@@ -57,6 +61,7 @@ const Quiz = ({ quizFinished: quizFinishedProp }) => {
     }, []);
 
    useEffect(() => {
+     // useEffect hook to handle time out
         if (timeRemaining <= 0 && nameSubmitted && !quizFinished) {
            handleSubmitQuiz();
        }
@@ -64,6 +69,8 @@ const Quiz = ({ quizFinished: quizFinishedProp }) => {
 
 
    useEffect(() => {
+          // useEffect hook to set the timer for the full quiz
+
         if (nameSubmitted && !quizFinished) {
             timerRef.current = setInterval(() => {
                 setTimeRemaining((prevTime) => prevTime - 1);
@@ -74,6 +81,8 @@ const Quiz = ({ quizFinished: quizFinishedProp }) => {
 
 
     useEffect(() => {
+            // useEffect hook to set the timer for every question
+
         const interval = setInterval(() => {
            if (nameSubmitted && !quizFinished) {
                 setQuestionTimers((prevTimers) => {
@@ -98,6 +107,8 @@ const Quiz = ({ quizFinished: quizFinishedProp }) => {
     };
 
     const handleNameSubmit = (e) => {
+             // Function to handle name submission on the landing page
+
         e.preventDefault();
         if (userName.trim() === '') {
             alert('Please enter a valid user name.');
@@ -107,6 +118,7 @@ const Quiz = ({ quizFinished: quizFinishedProp }) => {
       navigate('/quiz', { state: { userName } });
     };
 
+     // Function to handle options click
 
     const handleOptionSelect = (questionId, optionId) => {
         if (!questionTimers[questionId]) {
@@ -120,6 +132,7 @@ const Quiz = ({ quizFinished: quizFinishedProp }) => {
             [questionId]: optionId,
         });
     };
+     // Function to handle the next question logic
 
    const handleNextQuestion = () => {
       const currentQuestion = quizData?.questions?.[currentQuestionIndex];
@@ -137,6 +150,7 @@ const Quiz = ({ quizFinished: quizFinishedProp }) => {
       }));
       setCurrentQuestionIndex(currentQuestionIndex + 1);
    };
+    // function to handle submit logic
 
     const handleSubmitQuiz = () => {
       const currentQuestion = quizData?.questions?.[currentQuestionIndex];
@@ -163,6 +177,7 @@ const Quiz = ({ quizFinished: quizFinishedProp }) => {
        navigate('/results', {state : { userName, score, totalQuestions: quizData.questions.length, questions:quizData.questions, userAnswers, questionTimers, timeRemaining }});
     };
 
+       // Function to restart the quiz
 
     const handleRestartQuiz = () => {
         setCurrentQuestionIndex(0);

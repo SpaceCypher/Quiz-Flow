@@ -1,6 +1,8 @@
 import React from 'react';
 
-const Results = ({ score, totalQuestions, userName, onRestart, questions, userAnswers, questionTimers, timeRemaining }) => {
+const Results =
+     // Get data from the navigation.state
+     ({ score, totalQuestions, userName, onRestart, questions, userAnswers, questionTimers, timeRemaining }) => {
    const formatTime = (timeInSeconds) => {
        if (timeInSeconds === undefined || isNaN(timeInSeconds)) return "00:00";
         const minutes = Math.floor(timeInSeconds / 60);
@@ -9,6 +11,8 @@ const Results = ({ score, totalQuestions, userName, onRestart, questions, userAn
     };
 
   const formatText = (text) => {
+        // Function to format time from seconds to mm:ss
+
        if (!text) return null;
        return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
   };
