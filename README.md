@@ -49,7 +49,7 @@ Before you begin, make sure you have the following installed:
 1.  **Clone the repository (optional):**
 
     ```bash
-    git clone <your_repo_url>
+    git clone https://github.com/SpaceCypher/Quiz-Flow.git
     cd quiz-app
     ```
 
