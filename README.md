@@ -15,8 +15,6 @@ This is a quiz application built with React for the frontend and Node.js with Ex
 -   Responsive design
 -   Uses React Router for navigation
 -   Uses environment variables to store the api url
--   Shuffles questions for every new quiz.
--   Responsive Design
 
 ## Video Demonstration
 https://github.com/user-attachments/assets/0107f785-3d5e-4ce1-8014-a9ff597eef11
